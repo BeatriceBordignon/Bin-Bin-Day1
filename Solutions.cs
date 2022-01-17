@@ -51,22 +51,26 @@ public class StringFunctions
     public string EmailMaker(string input)
     {
             
-            try{
-                    //Regex str = new Regex("[^A-Za-z0-9]");
-            if(!input.Contains("/"))
+            try
             {
-            if (input.Contains(" "))
-                    {
-                        return input.Replace(" ",".") + "@gmail.com";
-                    } else
+                //Regex str = new Regex("[^A-Za-z0-9]");
+                    if(!input.Contains("/"))
+                      {
+                        if (input.Contains(" "))
+                        {
+                            return input.Replace(" ",".") + "@gmail.com";
+                        } 
+                    else
                         return input + "@gmail.com";
-            }}
+                        }
+            }
             catch (Exception ex)
             {
-
-throw ex;
-             }
+                throw ex;
+            }
 
         
     }
 }
+
+//just a Git TryTest!
